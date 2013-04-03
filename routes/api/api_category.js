@@ -1,4 +1,4 @@
-var db = require('../dblayer.js');
+//var db = require('../dblayer.js');
 
 var getCategories = function(params, callback) {
    console.log('In getCategories function');

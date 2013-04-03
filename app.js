@@ -28,6 +28,25 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.post('/signup', function(req, res) {
+	console.log("Express server 3 " + app.get('/'));
+	res.sendfile('public/tpl/SignupView.html');
+});
+
+app.get('/', function(req, res) {
+	console.log("Express server  " + app.get('/'));
+	res.sendfile('public/tpl/WelcomeView.html');
+});
+
+app.get('/1', function(req, res) {
+	console.log("Express server 1 " + app.get('/'));
+	res.sendfile('public/tpl/RetailerHomeView.html');
+});
+
+app.post('/', function(req, res){
+    console.log("test");
+});
+
 app.all('/api/*', restapi.routeCall);
 app.get('/', routes.index);
 

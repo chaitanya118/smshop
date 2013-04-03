@@ -1,5 +1,5 @@
-var sql = require('node-sqlserver');
-var config = reuire('./config');
+var sql = require('msnodesql');
+var config = require('./config');
 
 //var conn = sql.open(config.conn_str);
 
@@ -9,7 +9,7 @@ exports.onError = function(err, callback) {
   return callback(500, "UNEXPECTED INTERNAL ERROR");
 }
 
-export query = function(string, callback) {
+exports.query = function(string, callback) {
    var results;
    sql.query(config.conn_str, string, function (err, rows) {
 

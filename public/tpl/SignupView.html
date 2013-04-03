@@ -1,0 +1,87 @@
+<div class="">
+
+	<div class="control-group">
+		<div class="controls">
+			<img class="about-icon" src="img/download.png" width="50">
+		</div>
+	</div>
+    <form action="/signup" method="post">
+
+        <br/>
+		<div class="row">
+			<div class="span8">
+
+				<div class="control-group">
+					<div class="controls">
+						<input type="text" id="fname" name="fname" value="" placeholder="Name"/>
+						<span class="help-inline"></span>
+					</div>
+				</div>
+				
+				<br/>
+				<div class="control-group">
+					<div class="controls">
+						<select class="input-small" id="gender" name="gender" value="">
+							<option
+							<%= gender == Gender?'selected':'' %>Gender</option>
+							<option
+							<%= gender == Male?'selected':'' %>Male</option>
+							<option
+							<%= gender == Female?'selected':'' %>Female</option>
+						</select>
+					</div>
+				</div>
+				<br/>
+				
+				<div class="control-group">
+					<div class="controls">
+						<input type="text" id="email" name="email" value="" placeholder="Email"/>
+						<span class="help-inline"></span>
+					</div>
+				</div>
+				<br/>
+				
+				<div class="control-group">
+					<div class="controls">
+						<input type="text" id="phoneno" name="phoneno" value="" placeholder="10 digit Phone#(Optional)"/>
+						<span class="help-inline"></span>
+					</div>
+				</div>
+				<br/>
+				
+				<div class="control-group">
+					<div class="controls">
+						<input type="text" id="zip" name="zip" value="" placeholder="6 digit ZIP Code (Optional)"/>
+						<span class="help-inline"></span>
+					</div>
+				</div>
+				<br/>
+				
+				<div class="control-group">
+					<div class="controls">
+						<input type="text" id="promo" name="promo" value="" placeholder="Promotion Code (Optional)"/>
+						<span class="help-inline"></span>
+					</div>
+				</div>
+				<br/>
+				
+				<div class="control-group">
+					<div class="controls">
+						<input type="checkbox" id="tnc" name="tnc"/>
+						<label>I agree with </label>
+						<a href="#" class="">T&C</a>
+					</div>
+					<br/>
+					<div class="controls">
+						<input type="button" id="submit" name="submit" value="Submit"/>
+						<span class="help-inline"></span>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+    </form>
+
+</div>
