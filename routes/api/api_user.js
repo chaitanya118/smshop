@@ -1,4 +1,4 @@
-var db = require('msnodesql');
+var db = require('../dblayer');
 var config = require('../config');
 
 exports.onError = function(err, callback) {
@@ -22,18 +22,8 @@ var deleteUsers = function(params, callback) {
 
 var putOrPostUsers = function (params, callback) {
    console.log('In putOrPostUser function');
-   var string = "INSERT INTO [dbo].[users] VALUES(6754,'fundu','chaitanya118@gmail.com',CAST(1 AS BIT),CAST(1 AS BIT),'0123456789','333031',1234,5678,1)";
-   var results;
-   db.query(config.conn_str, string, function (err, rows) {
-
-            if (err)
-               console.log('Error: ' + err);
-               //return this.onError(err, callback);
-            //if (rows.length == 0)
-            //  return callback(403, "MUST SPECIFY VALID COUNTRY CODE");
-            //var buffer = new Buffer('0123456789abcdef', 'hex');
-            results = rows;
-        });
+   var string = "INSERT INTO [dbo].[users] VALUES(6760,'fundu','chaitanya118@gmail.com',CAST(1 AS BIT),CAST(1 AS BIT),'0123456789','333031',1234,5678,1)";
+   var results = db.executeStatement(string);
   return callback(200, "OK", {}, results);
 };
 
