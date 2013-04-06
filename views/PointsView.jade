@@ -12,7 +12,7 @@ br
 			td Offers
 			td Transaction
 br
-form(action='/transaction')
+form(action='/transaction', method="post")
 	.controls
 		label SMaaRTPOINTS
 		input#amount(type='text', name='amount', value='#{points}', readonly='readonly')
@@ -27,17 +27,20 @@ form(action='/transaction')
 			td Dosa
 			td 25
 			td 
-				input#redeem1(type='checkbox', name='redeem1', onclick="")
+				input#redeem1(type='checkbox', name='redeem1')
 		tr
 			td Buffet Lunch 2
 			td 50
 			td 
-				input#redeem2(type='checkbox', name='redeem2', onclick="")
+				input#redeem2(type='checkbox', name='redeem2')
 		tr
 			td Idli
 			td 10
 			td 
-				input#redeem3(type='checkbox', name='redeem3', onclick="")
+				input#redeem3(type='checkbox', name='redeem3')
+	br
+	.controls
+		input#redeem(type='submit', name='redeem', value='Redeem', onclick='this.form.action="/redeem";this.form.method="post";')
 	br
 	.controls
 		input#submit(type='submit', name='submit', value='Transact to Get More Points')

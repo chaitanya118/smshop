@@ -1,73 +1,61 @@
-.row-fluid
-    .control-group
-        .controls
-          fieldset
-            b SMaaRTSHOP
-            table(style='width: 45%; float: right;')
-            tbody
-              tr
-                td
-                  i Urban Tandoor
-      br
-      .sec_tab
-        table(border='1', width='100%')
-          tr
-            td Offers
-            td Transaction
-      br
-      form(action='/signup', method='post')
-        .control-group
-          .controls
-            label $ Amount
-            input#amount(type='text', name='amount', value='')
-        br
-        .controls
-          input#categories(type='checkbox', name='categories', onchange='toggleCategories()')
-          label  Categories
-        br
-        .control-group
-          .controls
-            label Passcode
-            input#password(type='password', name='password', value='')
-        br
-        #divcategory(style='display: block;')
-          label Select Category
-          br
-          .controls
-            select#categories.input-small(name='category', value='')
-			  each item in #{categories}
-				option(value='cat') item.name
-        br
-        div
-          input#review(type='text', name='review', value='Review to earn More points')
-        br
-        div
-          input#fb(type='radio', name='fb', checked='checked')
-          label fb
-          input#email(type='radio', name='email')
-          label yelp
-          input#linkedin(type='radio', name='linkedin')
-          label g+
-          input#twitter(type='radio', name='twitter')
-          label twitter
-        br
-        .controls
-          input#submit(type='submit', name='submit', value='Submit')
-      .sec_tab
-        table(border='1', width='100%')
-          tr
-            td Home
-            td Settings
-            td Offers
-            td Points
-      script(type='text/javascript')
-        function toggleCategories() {
-        var dv = document.getElementById('divcategory');
-        if (dv) {
-        if (dv.style.display == 'block') {
-        dv.style.display = 'none';
-        } else {
-        dv.style.display = 'block';
-        }
-        }
-        }
+fieldset
+	b SMaaRTSHOP
+	table(style='width: 45%; float: right;')
+		tbody
+		tr
+			td
+				i Urban Tandoor
+br
+.sec_tab
+	table(border='1', width='100%')
+		tr
+			td Offers
+			td Transaction
+br
+form(action='/redemption', method='post')
+	.controls
+		label $ Amount
+		input#amount(type='text', name='amount', value='')
+	br
+	.controls
+		input#categories(type='checkbox', name='categories', onchange='toggleCategories()')
+		label  Categories
+	br
+	.controls
+		label Passcode
+		input#password(type='password', name='password', value='')
+	br
+	#divcategory(style='display: block;')
+		label Select Category
+	br
+	.controls
+		select(name='category', value='')
+			option(value='cat') Lunch Only
+			option(value='cat') Dinner Only
+			option(value='cat') Valentine Day
+			option(value='cat') Groupon
+			option(value='cat') Others
+	br
+	div
+		input#review(type='text', name='review', value='Review to earn More points')
+	br
+	div
+		input#fb(type='radio', name='fb', checked='checked')
+		label fb
+		input#email(type='radio', name='email')
+		label yelp
+		input#linkedin(type='radio', name='linkedin')
+		label g+
+		input#twitter(type='radio', name='twitter')
+		label twitter
+	br
+	.controls
+		input#submit(type='submit', name='submit', value='Submit')
+	br
+	.sec_tab
+	table(border='1', width='100%')
+		tr
+			td Home
+			td Settings
+			td Offers
+			td Points

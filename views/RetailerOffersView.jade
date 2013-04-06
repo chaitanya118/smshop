@@ -6,7 +6,7 @@ fieldset
 			td
 				i Urban Tandoor
 br
-form(action='', method='post')
+form
 	.controls
 		input#edit(type='button', name='edit', value='Edit')
 	br
@@ -25,10 +25,6 @@ form(action='', method='post')
 			td Comment on Yelp
 			td 5
 	br
-	fieldset
-		.controls
-			input#email(type='text', name='offer', value='', placeholder='Add Offer') 
-			input#phoneno(type='text', name='points', value='', placeholder='Add Points')
 	br
 	.controls
 		input#save(type='submit', name='save', value='Save')
@@ -36,7 +32,7 @@ form(action='', method='post')
 	.sec_tab
 	table(border='1', width='100%')
 		tr
-		td Home
+		td(onClick="/retailerHome") Home
 		td Settings
 		td Offers
 		td Points

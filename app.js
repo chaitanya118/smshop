@@ -49,7 +49,24 @@ app.post('/channel', function(req, res) {
 	res.render('SignupView');
 });
 
-app.get('/transaction', function(req, res) {
+app.post('/redeem', function(req, res) {
+	console.log("Extracting channel redeem " + app.get('/'));
+	var points = req.body.redeem1 == "on" ? 25 : req.body.redeem2 == "on" ? 50 : 10;
+	req.session.rpoints = points;
+	console.log("r1: "+req.body.redeem1);
+	console.log("r2: "+req.body.redeem2);
+	console.log("r3: "+req.body.redeem3);
+	res.render('RedeemView');
+});
+
+app.post('/redemption', function(req, res) {
+	console.log("Extracting channel redeem " + app.get('/'));
+	var points = req.session.rpoints == 25 ? 25 : req.session.rpoints == 50 ? 0 : 40;
+	res.render('PointsView',
+			{title:'Points', points:points});
+});
+
+app.post('/transaction', function(req, res) {
 	console.log("Extracting channel info " + app.get('/'));
 	var offers = {"Buy Dosa":25, "Buffet Lunch for 2":100,"Comments on Yelp":5};
 	res.render('CustomerPointsView',{offers:offers, points:50});
@@ -65,13 +82,20 @@ app.post('/signup', function(req, res) {
 	console.log(req.body.promo);
 	console.log("channel: "+req.session.channel);
 	var promo = req.body.promo;
+	console.log("channel: "+promo);
 	if(promo != null && promo != undefined && promo != "" && promo.indexOf("1234") == 0) {
+		console.log("before rendering: ");
 		res.render('RetailerOffersView');
 	} else {
 		res.render('SearchView',
 				{title:'Search'});
 	}
 	//connecttoDB();
+});
+
+app.get('/retailerHome', function(req, res) {
+	console.log("Extracting channel for retailer home");
+	res.render('RetailerHomeView');
 });
 
 app.post('/search', function(req, res) {
