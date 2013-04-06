@@ -1,27 +1,31 @@
 //var db = require('../dblayer.js');
 
-var getUsers = function(params, callback) {
-   console.log('In getUsers function');
+var get = function(params, callback) {
+   console.log('[user.get]initiated.');
   return callback(200, "OK", {}, result);
 
 };
 
 
-var deleteUsers = function(params, callback) {
-  console.log('In deleteUser function');
+var del = function(params, callback) {
+  console.log('[user.delete]initiated.');
   return 0;
 };
 
 
-var putOrPostUsers = function (params, callback) {
-   console.log('In putOrPostUser function');
+var update = function (params, callback) {
+   console.log('[user.update]initiated.');
   return callback(200, "OK", {}, params);
 };
 
+var create = function (params, callback) {
+   console.log('[user.create]initiated.');
+  return callback(200, "OK", {}, params);
+};
 
 exports.dispatch = {
-  GET:    getUsers,
-  DELETE: deleteUsers,
-  PUT:    putOrPostUsers,
-  POST:   putOrPostUsers
+  GET:    get,
+  DELETE: del,
+  PUT:    update,
+  POST:   create
 };

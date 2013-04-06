@@ -1,0 +1,46 @@
+fieldset
+	b SMaaRTSHOP
+	table(style='width: 45%; float: right;')
+		tbody
+		tr
+			td
+				i Urban Tandoor
+br
+form(action='', method='post')
+fieldset
+	label Scan QR Code
+br
+.controls
+	input#amount(type='text', name='amount', value='', placeholder='Enter customer SMaaRT#')
+br
+.control-group
+	label Amount
+	input#amount(type='text', name='amount', value='')
+br
+.controls
+	input#categories(type='checkbox', name='categories', onchange='toggleCategories()')
+	label  Show Categories
+br
+.controls(style='display: none;')
+	label Select Category
+br
+.controls(style='display: none;')
+	select(name='category', value='')
+		option(value='cat1') Lunch Only
+		option(value='cat2') Dinner Only
+		option(value='cat3') Weekly Visiter
+		option(value='cat4') Valentine Day
+		option(value='cat5') Group on
+		option(value='cat6') Others
+br
+.controls
+	input#submit(type='submit', name='submit', value='Submit')
+br
+.sec_tab
+	table(border='1', width='100%')
+		tr
+			td Home
+			td Settings
+			td Offers
+			td Points			
+

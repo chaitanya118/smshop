@@ -1,0 +1,42 @@
+fieldset
+	b SMaaRTSHOP
+	table(style='width: 45%; float: right;')
+		tbody
+		tr
+			td
+				i Urban Tandoor
+br
+form(action='', method='post')
+	.controls
+		input#edit(type='button', name='edit', value='Edit')
+	br
+	table(border='1')
+		tbody
+		tr
+			td Offers
+			td Points
+		tr
+			td Buy Dosa
+			td 25
+		tr
+			td Buffet Lunch for 2
+			td 100
+		tr
+			td Comment on Yelp
+			td 5
+	br
+	fieldset
+		.controls
+			input#email(type='text', name='offer', value='', placeholder='Add Offer') 
+			input#phoneno(type='text', name='points', value='', placeholder='Add Points')
+	br
+	.controls
+		input#save(type='submit', name='save', value='Save')
+	br
+	.sec_tab
+	table(border='1', width='100%')
+		tr
+		td Home
+		td Settings
+		td Offers
+		td Points

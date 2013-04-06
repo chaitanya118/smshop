@@ -1,0 +1,40 @@
+fieldset
+	b SMaaRTSHOP
+form(action='/signup', method='post')
+	br
+	.controls
+		input#fname(type='text', name='fname', value='', placeholder='Name')
+	br
+	.controls
+		select(name='gender', value='gender')
+			option(value='gender') Gender
+			option(value='male') Male
+			option(value='female') Female
+	br
+	.controls
+		input#email(type='text', name='email', value='', placeholder='Email')
+	br
+	.controls
+		input#phoneno(type='text', name='phoneno', value='', placeholder='10 digit Phone#(Optional)')
+	br
+	.controls
+		input#zip(type='text', name='zip', value='', placeholder='6 digit ZIP Code (Optional)')
+	br
+	.controls
+		input#promo(type='text', name='promo', value='', placeholder='Promotion Code (Optional)')
+	br
+	.controls
+		input#tnc(type='checkbox', name='tnc')
+		label I agree with 
+		a(href='#') T&C
+	br
+	.controls
+		input#submit(type='submit', name='submit', value='Submit')
+br	
+.sec_tab
+	table(border='1', width='100%')
+		tr
+		td Home
+		td Settings
+		td Offers
+		td Points

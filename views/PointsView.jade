@@ -1,0 +1,51 @@
+fieldset
+	b SMaaRTSHOP
+	table(style='width: 45%; float: right;')
+		tbody
+		tr
+			td
+				i Urban Tandoor
+br
+.sec_tab
+	table(border='1', width='100%')
+		tr
+			td Offers
+			td Transaction
+br
+form(action='/transaction')
+	.controls
+		label SMaaRTPOINTS
+		input#amount(type='text', name='amount', value='#{points}', readonly='readonly')
+	br
+	table(border='1')
+		tbody
+		tr
+			td Offers
+			td Points
+			td Redeem
+		tr
+			td Dosa
+			td 25
+			td 
+				input#redeem1(type='checkbox', name='redeem1', onclick="")
+		tr
+			td Buffet Lunch 2
+			td 50
+			td 
+				input#redeem2(type='checkbox', name='redeem2', onclick="")
+		tr
+			td Idli
+			td 10
+			td 
+				input#redeem3(type='checkbox', name='redeem3', onclick="")
+	br
+	.controls
+		input#submit(type='submit', name='submit', value='Transact to Get More Points')
+	br
+	.sec_tab
+	table(border='1', width='100%')
+		tr
+			td Home
+			td Settings
+			td Offers
+			td Points

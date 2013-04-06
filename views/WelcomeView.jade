@@ -1,0 +1,44 @@
+.row-fluid
+.control-group
+.controls
+	fieldset
+		b SMaaRTSHOP
+	br
+form(action='/channel', method='post')
+	fieldset
+		label Get Rewarded for being
+		br
+		label an engaged Partner!
+	br
+	fieldset
+		label f | Facebook Sign In
+	br
+	table(style='width: 45%; float: right;')
+		tbody
+			tr
+			td
+				input#email(type='radio', name='email', checked='checked')
+				label Email
+				br
+				input#fb(type='radio', name='fb')
+				label Facebook
+				br
+				input#twitter(type='radio', name='twitter')
+				label Twitter
+				br
+				input#linkedin(type='radio', name='linkedin')
+				label LinkedIn
+	fieldset
+		label First time here ?
+		br
+		label Create Account via
+	br
+	.controls
+		input#submit(type='submit', name='submit', value='Submit')
+	.sec_tab
+		table(border='1', width='100%')
+			tr
+			td Home
+			td Settings
+			td Offers
+			td Points
